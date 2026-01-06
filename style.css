@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f1220;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #161a35;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.criadores {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.bot-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cabeca {
+  width: 120px;
+  height: 120px;
+  background: #1f2450;
+  border-radius: 50%;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.corpo {
+  width: 80px;
+  height: 100px;
+  background: #1f2450;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+.fala {
+  margin-top: 15px;
+  background: #1a1f3d;
+  padding: 12px;
+  border-radius: 10px;
+  max-width: 80%;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  padding: 10px;
+  background: #161a35;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4a6cff;
+  color: white;
+  cursor: pointer;
+}
