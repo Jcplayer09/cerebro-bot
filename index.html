@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cerebro Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- TOPO -->
+  <header>
+    <div class="logo">🧠 Cerebro</div>
+    <div class="criadores">Criado por Júlio & Jarvis</div>
+  </header>
+
+  <!-- BOT -->
+  <main class="bot-area">
+    <div class="bot">
+      <div class="cabeca" id="emocao">🙂</div>
+      <div class="corpo"></div>
+    </div>
+
+    <div class="fala" id="falaBot">
+      Olá! Sou o Cerebro Bot. O que vamos estudar hoje?
+    </div>
+  </main>
+
+  <!-- CHAT -->
+  <footer>
+    <input type="text" id="input" placeholder="Digite sua pergunta..." />
+    <button onclick="enviar()">Enviar</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
