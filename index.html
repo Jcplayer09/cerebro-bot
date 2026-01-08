@@ -1,36 +1,140 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Cerebro Bot</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Bot Escolar</title>
+
+<style>
+body {
+  background: #0f172a;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.bot {
+  width: 360px;
+  background: #020617;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #000;
+}
+
+.topo {
+  background: #020617;
+  color: #38bdf8;
+  padding: 12px;
+  text-align: right;
+  font-size: 12px;
+}
+
+.cabeca {
+  background: #020617;
+  text-align: center;
+  padding: 10px;
+}
+
+.rosto {
+  width: 120px;
+  height: 120px;
+  background: black;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #38bdf8;
+  font-size: 40px;
+}
+
+.chat {
+  height: 250px;
+  padding: 10px;
+  overflow-y: auto;
+  color: white;
+  font-size: 14px;
+}
+
+.msg-bot {
+  background: #1e293b;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.msg-user {
+  background: #0284c7;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  text-align: right;
+}
+
+.input-area {
+  display: flex;
+  border-top: 1px solid #334155;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: #38bdf8;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- TOPO -->
-  <header>
-    <div class="logo">🧠 Cerebro</div>
-    <div class="criadores">Criado por Júlio & Jarvis</div>
-  </header>
+<div class="bot">
+  <div class="topo">Criado por Júlio e Jarvis</div>
 
-  <!-- BOT -->
-  <main class="bot-area">
-    <div class="bot">
-      <div class="cabeca" id="emocao">🙂</div>
-      <div class="corpo"></div>
-    </div>
+  <div class="cabeca">
+    <div class="rosto">🤖</div>
+  </div>
 
-    <div class="fala" id="falaBot">
-      Olá! Sou o Cerebro Bot. O que vamos estudar hoje?
-    </div>
-  </main>
+  <div class="chat" id="chat">
+    <div class="msg-bot">Olá! Sou seu bot escolar 📚</div>
+  </div>
 
-  <!-- CHAT -->
-  <footer>
-    <input type="text" id="input" placeholder="Digite sua pergunta..." />
+  <div class="input-area">
+    <input id="entrada" placeholder="Digite sua pergunta...">
     <button onclick="enviar()">Enviar</button>
-  </footer>
+  </div>
+</div>
 
-  <script src="script.js"></script>
+<script>
+function enviar() {
+  const input = document.getElementById("entrada");
+  const chat = document.getElementById("chat");
+  const texto = input.value.trim();
+
+  if (texto === "") return;
+
+  chat.innerHTML += `<div class="msg-user">${texto}</div>`;
+
+  let resposta = "Ainda estou aprendendo, mas já ouvi isso 🙂";
+
+  if (texto.toLowerCase().includes("fração")) {
+    resposta = "Uma fração representa uma parte de um todo.";
+  }
+
+  chat.innerHTML += `<div class="msg-bot">${resposta}</div>`;
+  input.value = "";
+  chat.scrollTop = chat.scrollHeight;
+}
+</script>
+
 </body>
 </html>
